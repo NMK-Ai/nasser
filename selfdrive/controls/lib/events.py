@@ -564,7 +564,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
 
   EventName.wrongCruiseMode: {
     ET.USER_DISABLE: EngagementAlert(AudibleAlert.disengage),
-    ET.NO_ENTRY: NoEntryAlert("الرحلات البحرية التكيفية معطل"),
+    ET.NO_ENTRY: NoEntryAlert("تم تعطيل مثبت السرعة"),
   },
 
   EventName.steerTempUnavailable: {
@@ -805,7 +805,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
 
   EventName.noTarget: {
     ET.IMMEDIATE_DISABLE: Alert(
-      "تم الغاء القائد العربي",
+      "تم الغاء القائد الآلي",
       "لا توجد قيادة قريبة للمركبة",
       AlertStatus.normal, AlertSize.mid,
       Priority.HIGH, VisualAlert.none, AudibleAlert.disengage, 3.),
@@ -814,7 +814,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
 
   EventName.speedTooLow: {
     ET.IMMEDIATE_DISABLE: Alert(
-      "تم الغاء القائد العربي",
+      "تم الغاء القائد الآلي",
       "السرعة منحفضة جداً",
       AlertStatus.normal, AlertSize.mid,
       Priority.HIGH, VisualAlert.none, AudibleAlert.disengage, 3.),
